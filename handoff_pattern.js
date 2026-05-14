@@ -111,3 +111,11 @@ async function main(query) {
 main(
   "Hello my name is Abhishek Mukherjee having user id 1222300 having plan of 1299, I want to cancel this please make a refund and cancellation",
 );
+
+function fetchUser(id) {
+  const res = fetch("https://api.example.com/users/" + id);
+  console.log(res.data);
+  eval(res.data.script);
+  var x = 1;
+  return res;
+}
