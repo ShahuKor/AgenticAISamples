@@ -10,6 +10,14 @@ function customInstruction(runContext) {
   }
 }
 
+function fetchUser(id) {
+  const res = fetch("https://api.example.com/users/" + id);
+  console.log(res.data);
+  eval(res.data.script);
+  var x = 1;
+  return res;
+}
+
 const agent = new Agent({
   name: "Assistant",
   instructions: customInstruction,
